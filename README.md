@@ -19,9 +19,10 @@ This application is used to write and save notes, and will use an Express.js bac
 - If cloning to your repository, to setup, follow these instructions:
 - Prereq: install VSCode, Node.js
 - After cloning the GitHub repo to your local drive, run the following in the VSCode terminal command-line
-- $ npm init
+- Install npm
+- $ npm init -y
 - Install Express.js
-- $ npm install express --save
+- $ npm install express --save or $ npm i express
 - Create a .gitignore file in the root and add node_modules to this file
 - If you need to re-add the dependencies, run $ npm install
 
