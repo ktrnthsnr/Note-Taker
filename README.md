@@ -3,12 +3,13 @@
 ## GitHub repository
 https://github.com/ktrnthsnr/Note-Taker
 
-## Website URL
+## URL
 https://ktrnthsnr.github.io/Note-Taker
 
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
+* [Usage](#usage)
 * [Technology](#technology)
 * [Contribution](#contribution)
 
@@ -23,8 +24,14 @@ This application is used to write and save notes, and will use an Express.js bac
 - $ npm init -y
 - Install Express.js
 - $ npm install express --save or $ npm i express
-- Create a .gitignore file in the root and add node_modules to this file
 - If you need to re-add the dependencies, run $ npm install
+- Create a .gitignore file in the root and add node_modules to this file
+- For deploying the server, download Heroku, at https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+
+## Usage
+- To view the application locally before deploying, type in the terminal $ npm start
+- Open a browser to http://localhost:3002/
+![localhost](./localhost.jpg "Note-Taker_localhost_view")
 
 ## Technology
 Node, JavaScript, ES6, HTML, CSS, npm, Express.js, Heroku

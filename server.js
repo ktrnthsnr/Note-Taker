@@ -1,22 +1,61 @@
-// -- require Express.js
+// -- Dependencies, requires
 const express = require('express');
 // -- connect to the JSON data -- //
 const { notes } = require('./db/db');
+const path = require('path');
 
-// -- instantiate an Express server
+// -- Instantiate an Express server & set port
 const app = express();
+const PORT = 3002;
 
-// -- add a route (before listen) -- //
-app.get('/api/db', (req, res) => {
-    // -- quick test
-      // res.send('Hello!');
-    // -- respond with JSON data
-    res.json(notes);
+// -- Sets Express app for data parsing when needed
+app.use(express.urlencoded({ extended: true }));
+// -- serve JSON files in a directory called db
+app.use(express.json('db'));
+// -- serve other static files in a directory called public
+app.use(express.static('public'))
+app.use('/notes', express.static(path.join(__dirname, 'public')))
+
+// -- Data 
+
+    // --> to do:  connect to the JSON array
+
+
+
+// -- Routes, add a route (before listener) -- //
+
+  // -- Home route to index.html
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
   });
 
-// -- listen for requests, set the port, chain listen() method onto the server
-app.listen(3002, () => {
-    console.log(`API server now on port 3002!`);
+  // -- Notes route to index.html
+  app.get('/notes', (req, res) => {
+    console.log(__dirname);
+    res.sendFile(path.join(__dirname, "notes.html"));
+  });
+
+  // app.get('/notes', (req,res) => {
+  //   console.log(__dirname);
+  //   res.sendFile(path.join(__dirname, 'notes.html'));
+  // });
+
+
+  // -- JSON test route
+  app.get('/api/db', (req, res) => {
+      // -- quick test
+        // res.send('Hello!');
+      // -- respond with JSON data
+      res.json(notes);
+    });
+
+
+
+
+
+// -- Listener, located at the end of the file; listens for requests; listen() method of the server or app object
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}`);
   });
   
 

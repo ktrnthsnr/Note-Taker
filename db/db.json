@@ -1,9 +1,19 @@
 {
     "notes": [
         {
-        "title":"Test Title",
-        "text":"Test text", 
-        "id": "test_id"
+        "title":"Decide on deliverables",
+        "text":"Get decision on final deliverables.", 
+        "id": "1"
+        } ,
+        {
+        "title":"Identify tasks for the sprint",
+        "text":"Identify tasks per Acceptance Criteria.", 
+        "id": "2"
+        } ,
+        {
+        "title":"Estimates for tasks",
+        "text":"Prepare hourly estimates per task.", 
+        "id": "3"
         } 
     ]
 }
