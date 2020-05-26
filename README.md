@@ -26,7 +26,8 @@ This application is used to write and save notes, and will use an Express.js bac
 - $ npm install express --save or $ npm i express
 - If you need to re-add the dependencies, run $ npm install
 - Create a .gitignore file in the root and add node_modules to this file
-- For deploying the server, download Heroku, at https://devcenter.heroku.com/articles/heroku-cli#download-and-install
+- To deploy, first create a Heroku account and then install the CLI https://devcenter.heroku.com/articles/heroku-cli
+- Create a new Heroku application by entering, $ heroku create 
 
 ## Usage
 - To view the application locally before deploying, type in the terminal $ npm start
