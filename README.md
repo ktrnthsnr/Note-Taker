@@ -3,8 +3,8 @@
 ## GitHub repository
 https://github.com/ktrnthsnr/Note-Taker
 
-## URL
-https://ktrnthsnr.github.io/Note-Taker
+## Heroku site
+https://ktrnthsn-notetaker.herokuapp.com/
 
 ## Table of Contents
 * [Description](#description)

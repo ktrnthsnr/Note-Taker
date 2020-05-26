@@ -69,4 +69,5 @@ app.listen(PORT, () => {
 // -- successful response here: http://localhost:3002/api/db 
 // -- 3. after adding JSON route, start again
 // -- successful response here: http://localhost:3002/api/db 
+// -- 4. Heroku site: https://ktrnthsnr-notetaker.herokuapp.com/ 
 
