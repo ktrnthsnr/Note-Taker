@@ -6,7 +6,9 @@ const path = require('path');
 
 // -- Instantiate an Express server & set port
 const app = express();
-const PORT = 3002;
+// -- Heroku requires port 80, set the environment variable process.env.PORT
+const PORT = process.env.PORT || 3002;
+// const PORT = 3002;
 
 // -- Sets Express app for data parsing when needed
 app.use(express.urlencoded({ extended: true }));
@@ -55,8 +57,8 @@ app.use('/notes', express.static(path.join(__dirname, 'public')))
 
 // -- Listener, located at the end of the file; listens for requests; listen() method of the server or app object
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}`);
-  });
+  console.log(`API server now on port ${PORT}!`);
+});
   
 
 // -- How to test and run step by step:
